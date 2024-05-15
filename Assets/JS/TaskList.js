@@ -27,6 +27,8 @@ form.addEventListener("submit", function (event) {
   nuovoTaskField.value = "";
 }); */
 
+// Ho ricominciato l'esercizio da capo
+
 const form = document.getElementById("tsk-form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -42,21 +44,24 @@ form.addEventListener("submit", function (event) {
   const titoloTask = document.createElement("h5");
 
   titoloTask.innerText = `${nomeTask.value}`; //attribuisco l'input alla nuovo div
-  console.log(titoloTask);
+  //console.log(titoloTask);
   const bottoneElimina = document.createElement("button");
   bottoneElimina.innerText = "Elimina";
 
   task.append(titoloTask, bottoneElimina); //attibuisco il titolo e il bottone al nuovo div
   const listaTask = document.getElementById("task-list");
-  console.log(listaTask);
+  //Funzione console.log(listaTask);
   listaTask.appendChild(task);
-
+  // Funzione Click che sbarra la task completata
   titoloTask.addEventListener("click", function (event) {
     titoloTask.classList.toggle("sbarra");
   });
+
+  //Funzione Bottone che elimina le task completate
   bottoneElimina.addEventListener("click", function (event) {
     task.remove();
   });
 
-  nomeTask.value = "";
+  nomeTask.value = ""; // ripulisce i campi di input una volta premuto il tasto invio
 });
+// Esercizio svolto come richiesto.
