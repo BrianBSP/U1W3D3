@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio DOM</title>
+    <link rel="stylesheet" href="./css/TaskList.css" />
+  </head>
+  <body>
+    <h1>La tua Task List</h1>
+    <main>
+      <form id="tsk-form">
+        <div>
+          <label for="nuovo-tsk"><h3>Nuovo TASK</h3></label>
+        </div>
+        <div id="userinputs">
+          <input
+            id="nuovo-tsk"
+            type="text"
+            placeholder="Inserisci un nuovo Task"
+            maxlength="50"
+          />
+
+          <button>Aggiungi TASK</button>
+
+          <!--  <label for="ck-compl">Completato</label>
+          <input id="ck-compl" type="checkbox" />
+
+          <label for="ck-del">Elimina</label>
+          <input id="ck-del" type="checkbox" /> -->
+        </div>
+      </form>
+      <section id="task-list"></section>
+    </main>
+    <script src="./JS/TaskList.js"></script>
+  </body>
+</html>
